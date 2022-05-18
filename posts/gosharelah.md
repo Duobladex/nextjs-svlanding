@@ -3,8 +3,7 @@ title: "GoShareLah"
 date: "2020-01-01"
 ---
 
-![Icon](nextjs-svlanding\public\images\gosharelah.png)
-<!-- <img src="nextjs-svlanding\public\images\gosharelah.png" alt="gosharelah" width="128"/> -->
+![Icon](/images/gosharelah.png)
 
 Want influencers to create the content and promote your brand, product or service?
 
