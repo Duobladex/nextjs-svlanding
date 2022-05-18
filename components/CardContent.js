@@ -1,7 +1,7 @@
 import styles from '../styles/cardContent.module.scss'
 import Button from './Button';
 
-const CardContent = ({ logo, desc, list }) => {
+const CardContent = ({ logo, desc, lists }) => {
   return (
     <div className={styles.card}>
       <div className={styles.heading}>
@@ -12,7 +12,11 @@ const CardContent = ({ logo, desc, list }) => {
           {desc}
         </div>
         <div className={styles.list}>
-          {list}
+          <ul>
+            {lists.map((list, id) => (
+              <li key={id}>{list}</li>
+            ))}
+          </ul>
         </div>
       </div>
       <Button />
