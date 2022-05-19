@@ -1,13 +1,16 @@
 .button {
-  border: 1px solid #F53855;
-  border-radius: 50px;
-  box-sizing: border-box;
-  color: #E43631;
-  text-align: center;
-  padding: 10px;
-  cursor: pointer;
+    border: 1px solid #F53855;
+    border-radius: 50px;
+    box-sizing: border-box;
+    color: #E43631;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: small;
 }
 
 .button:hover {
-  background-color: rgba(238, 238, 238, 0.655);
+    background-color: rgba(238, 238, 238, 0.655);
 }

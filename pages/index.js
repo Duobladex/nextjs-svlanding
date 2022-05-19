@@ -3,41 +3,49 @@ import Layout, { siteTitle } from '../Components/Layout'
 import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
-import Date from '../Components/Date'
-import CardContent from "../Components/CardContent"
+import Image from 'next/image'
+import { title } from 'process'
+import CardsBox from '../Components/CardsBox'
+import CardContent from '../Components/CardContent'
+
+const dummy = [
+  {
+    title: 'GoShareLah',
+    logo: <Image src='/../public/images/gosharelah.png' width={127} height={21} />,
+    content: 'Want influencers to create the content and promote your brand, product or service?',
+    lists: ['KOL self service : 0%',
+      'KOL VIP service : 10% (incl simple video editing & caption writing)',
+      "Brands VIP service : 30 - 45% (depends on service). Refer to the 'VIP Service for Brands' below"
+    ]
+  },
+  {
+    title: 'Sushivid',
+    logo: <Image src='/../public/images/SushiVid Logo 1.png' width={72} height={21} />,
+    content: 'Want influencers to create the content and promote your brand, product or service?',
+    lists: ['KOL self service : 0%',
+      'KOL VIP service : 10% (incl simple video editing & caption writing)',
+      "Brands VIP service : 30 - 45% (depends on service). Refer to the 'VIP Service for Brands' below"
+    ]
+  },
+  {
+    title: 'confirm plus chop',
+    logo: <Image src='/../public/images/Asset 7 1.png' height={21} width={127} />,
+    content: 'Want influencers to create the content and promote your brand, product or service?',
+    lists: ['KOL self service : 0%',
+      'KOL VIP service : 10% (incl simple video editing & caption writing)',
+      "Brands VIP service : 30 - 45% (depends on service). Refer to the 'VIP Service for Brands' below"
+    ]
+  }
+]
 
 export default function Home({ allPostsData }) {
+  console.log(allPostsData)
   return (
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
-        <p>[Your Self Introduction]</p>
-        <p>
-          (This is a sample website - you’ll be building a site like this in{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
-      </section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>
-                <a>{title}</a>
-              </Link>
-              <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
-            </li>
-          ))}
-        </ul>
-      </section>
-      <div>
-        <CardContent />
-      </div>
+      <CardsBox storedData={dummy} />
     </Layout>
   )
 }
