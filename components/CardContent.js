@@ -8,9 +8,6 @@ import Button from './Button';
 const CardContent = ({ storedData, primary, setPrimary }) => {
   let newId = 0;
   const handleClick = (event) => {
-    console.log('control', typeof (primary))
-    console.log('click', typeof (event.target.id))
-    console.log('length', storedData.length)
     newId = parseInt(event.target.id);
     if (newId > -1 && newId < storedData.length) {
       setPrimary(newId);
