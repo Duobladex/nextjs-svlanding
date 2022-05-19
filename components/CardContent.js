@@ -3,6 +3,7 @@ import Button from './Button';
 
 const CardContent = ({ logo, desc, lists }) => {
   return (
+
     <div className={styles.card}>
       <div className={styles.heading}>
         {logo}
